@@ -1,0 +1,71 @@
+@import "mixin";
+@mixin toolbar-switch($beginPos, $endPos) {
+    background-position: 0 $beginPos;
+    &:hover {
+        background-position: 0 $endPos;
+    }
+}
+
+$toolbar-size:52px;
+.toolbar-item,
+.toolbar-ewm {
+    display: block;
+    background: url("../images/toolbar.png") no-repeat;
+}
+
+.toolbar {
+    position: fixed;
+    right: 50%;
+    bottom: 10px;
+    width: $toolbar-size;
+    margin-left: - $toolbar-size / 2;
+    .toolbar-item {
+        position: relative;
+        width: $toolbar-size;
+        height: $toolbar-size;
+        margin-top: 1px;
+        @include transition(background 1s);
+        &:hover {
+            .toolbar-ewm {
+                @include opacity(1);
+                @include transform(1);
+            }
+        }
+    }
+    .toolbar-item-weixin {
+        @include toolbar-switch(-798px,
+        -860px);
+        .toolbar-ewm {
+            height: 212px;
+        }
+    }
+    .toolbar-item-feedback {
+        @include toolbar-switch(-426px,
+        -489px);
+    }
+    .toolbar-item-app {
+        @include toolbar-switch(-550px,
+        -613px);
+        .toolbar-ewm {
+            height: 194px;
+            background-position: 0 -212px;
+        }
+    }
+    .toolbar-item-top {
+        @include toolbar-switch(-674px,
+        -737px);
+       
+    }
+}
+
+.toolbar-ewm {
+    position: absolute;
+    width: 172px;
+    right: $toolbar-size;
+    bottom: -10px;
+    @include opacity(0);
+    @include transform(0);
+    @include transform-origin(95% 95%);
+    @include transition(all 1s);
+    background: url("../images/toolbar.png") no-repeat;
+}
