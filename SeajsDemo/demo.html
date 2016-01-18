@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>seajs</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript" src="js/sea.js"></script>
+<script type="text/javascript">
+	//配置文件
+	seajs.config({
+		base:'./js/',
+		alias:{
+			jq:'jquery'
+		}
+	});
+	//引入主文件
+	seajs.use('main');
+</script>
+</html>
