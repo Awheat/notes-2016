@@ -1,0 +1,19 @@
+/*
++--------------------------------------------------------------------
++       #reset
++--------------------------------------------------------------------
+*/
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0; padding:0; border:0; font:inherit; vertical-align:baseline;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+body{min-width:320px; color: #333333; font-size: 18px; font-family:"Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif; overflow: hidden; background-color: #f3f3f3;}
+ol,ul{list-style:none;}
+input,textarea{outline:0;resize:none;}
+input::-moz-placeholder, textarea::-moz-placeholder{color: #ccc;}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder{color: #ccc;}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{color: #ccc;}
+input,textarea,button{-webkit-appearance: none; border: 0; margin: 0; padding: 0; font-size:16px; font-family:"Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;}
+a{background: transparent; text-decoration: none; color: #000;}
+a:active{outline: 0;}
+img{border:none;}
+i,em{font-style:normal;}
+*{tap-highlight-color:rgba(0,0,0,0); -webkit-tap-highlight-color:rgba(0,0,0,0); -ms-tap-highlight-color:rgba(0,0,0,0); -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; box-sizing:border-box; padding:0; margin:0;}

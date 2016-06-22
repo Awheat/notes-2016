@@ -1,0 +1,12 @@
+{
+  "headerBar":{
+    "area":"北京",
+    "title":"渔友圈",
+    "sign":"签到"
+  },
+  "sliders":[
+    "test.jpg",
+    "test.jpg",
+    "test.jpg"
+  ]
+}
