@@ -1,0 +1,32 @@
+<!-- 我的业绩 -->
+<link rel="stylesheet" type="text/css" href="../libs/mobiscroll/css/mobiscroll.css">
+<link rel="stylesheet" type="text/css" href="../libs/mobiscroll/css/mobiscroll_date.css">
+<div class="wz_body">
+    <section class="w100 packet_info mt1rem">
+      	<img src="dist/images/icon-07.png" class="fl img_circle">
+    </section>
+     <section class="w100 achie_info">
+    	<ul>
+        	<li>本月业绩<br><span>￥{{premium.month}}</span></li>
+        </ul>
+    </section>
+    <div class="clear"></div>
+    <form id="achie-form" class="achie-form" name="form" method="post" action="#">
+    <section class="bgwhite w100 packet_list mt1rem">
+        <input type="text" name="pm_date" id="pm_date" ng-model="init_date" value="" placeholder="请选择查询日期"/>
+        <!--选择日期出现的结果-->
+        <div id="data_wraper">
+            <ul>
+                <li ng-repeat="pm in premium.list">
+                    <span class="fr">{{pm.amount}}</span>{{pm.name}}<br/>
+                    <em class="ftgrey">{{pm.create_time}}</em>
+                </li>
+            </ul>
+        </div>
+    </section>
+    </form>
+</div>
+<script type="text/javascript" src="../libs/mobiscroll/js/mobiscroll_date.js" charset="gb2312"></script>
+<script type="text/javascript" src="../libs/mobiscroll/js/mobiscroll.js"></script>
+<script type="text/javascript" src="../libs/mobiscroll/js/mobiscroll.i18n.zh.js"></script>
+

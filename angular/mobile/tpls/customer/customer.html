@@ -1,0 +1,40 @@
+<div class="wz_body">
+    <form name="form" id="custForm" class="custForm" method="post" action="#">
+        <section class="bgwhite w100 person_info borbnone cust_search">
+            <input type="text" value="" ng-model="keyword" placeholder="请输入客户姓名" /><button type="button"><i class="icon icon_search"></i></button>
+        </section>
+        <section class="fr new_curstom button_preview"><a href="#/addcustomer"><img src="dist/images/icon-03.png" /></a></section>
+        <section class="w100 partner_info borbnone" ng-click="showTipsList()">
+            <div id="demo" class="conter ftgrey">
+                <div id="demo1">
+                    <a><i class="icon icon_gift"></i>您有<em class="ftorange">{{bir_total}}</em>个客户生日快到了</a>
+                    <a><i class="icon icon_gift"></i>最近有<em class="ftorange">{{holi_total}}</em>个节日快到了</a>
+                </div>
+                <div id=demo2></div>
+            </div>
+        </section>
+        <section class="bgwhite w100 mt1rem store_list bodb_padnone">
+            <ul class="customer_list" id="data_wraper">
+                <li ng-repeat="list in list">
+                    <a href="#/detail/{{list.id}}"><img src="" ng-src="{{list.pic}}" class="fl person_pics" />
+                        <h4 class="linh4r">{{list.name}}</h4></a>
+                </li>
+            </ul>
+        </section>
+    </form>
+</div>
+<script type="text/javascript">
+    var speed=60;
+    var demo=document.getElementById("demo");
+    var demo2=document.getElementById("demo2");
+    var demo1=document.getElementById("demo1");
+    demo2.innerHTML=demo1.innerHTML;
+    function Marquee(){
+        if(demo2.offsetTop-demo.scrollTop<=69){
+            demo.scrollTop-=demo1.offsetHeight;
+        }else{
+            demo.scrollTop++;
+        }
+    }
+    var MyMar=setInterval(Marquee,speed);
+</script>

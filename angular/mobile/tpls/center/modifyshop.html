@@ -1,0 +1,127 @@
+<!-- 修改我的微店 -->
+<style>
+    .wz_body,.edit_page{display: none;}
+    .wz_body.switch{display: block;}
+    .edit_page.switch{display: block;}
+    .edit_page.switch>div{display: none;}
+</style>
+<div class="wz_body switch">
+    <section class="bgwhite w100 mt1rem store_info">
+        <img src="{{baseinfo.photo}}" class="fr person_pics">
+        <span class="linh4r">我的头像</span>
+    </section>
+    <section class="bgwhite w100 mt1rem store_info" id="bg_pic" data-field="bg_pic" data-type="type_list">
+        <span class="fr bgimg_store"><img src="{{baseinfo.bgpic}}" data-id="{{baseinfo.id}}" class="fl"><i class="icon icon_ahref"></i></span>
+        <span class="linh4r">背景图片</span>
+    </section>
+    <section class="bgwhite w100 mt1rem store_list bodb_padbnone">
+        <h3 class="ftgrey">个人资料</h3>
+        <ul class="personal_data" id="person_detail">
+            <li data-field="name" data-type="type_input">
+                <span class="fr">{{baseinfo.name}}<i class="icon icon_ahref"></i></span>
+                <label class="ftgrey">&#12288;姓名</label>
+            </li>
+            <li data-field="sex" data-type="type_radio">
+                <span class="fr">{{baseinfo.sex}}<i class="icon icon_ahref"></i></span>
+                <label class="ftgrey">&#12288;性别</label>
+            </li>
+            <li data-field="mobile" data-type="type_input">
+                <span class="fr">{{baseinfo.tel}}<i class="icon icon_ahref"></i></span>
+                <label class="ftgrey">手机号</label>
+            </li>
+            <li data-field="weixinid" data-type="type_input">
+                <span class="fr">{{baseinfo.wechat}}<i class="icon icon_ahref"></i></span>
+                <label class="ftgrey">微信号</label>
+            </li>
+            <li data-field="qq" data-type="type_input">
+                <span class="fr">{{baseinfo.qq}}<i class="icon icon_ahref"></i></span>
+                <label class="ftgrey">&nbsp;QQ号</label>
+            </li>
+        </ul>
+    </section>
+    <section class="bgwhite w100 mt1rem store_info" id="describe" data-field="describe" data-type="type_textarea">
+       <h3 class="ftgrey"><i class="icon fr icon_ahref"></i>个人简介</h3>
+            <p>{{baseinfo.descr}}</p>
+    </section>
+    <section class="bgwhite w100 mt1rem store_info">
+        <h3 class="ftgrey">个人风采</h3>
+        <ul class="per_charisma">
+            <li><img src="dist/images/icon-06.png"></li>
+            <li><img src="dist/images/icon-06.png"></li>
+            <li><img src="dist/images/icon-06.png"></li>
+            <li><img src="dist/images/icon-06.png"></li>
+        </ul>
+    </section>
+    <section class="bgwhite w100 mt1rem store_list">
+        <h3 class="ftgrey">个人店铺</h3>
+        <ul class="goods_list_wraper">
+            <li ng-repeat="shop in baseinfo.shop">
+                <img src="" ng-src="{{shop.pic}}" class="fl" />
+                <h4>{{shop.name}}</h4>
+                <p class="ftgrey">{{shop.describe}}</p>
+            </li>
+        </ul>
+        <div class="article"><img src="dist/images/icon-06.png" class="add_shop"></div>
+    </section>
+    <section class="button_preview">
+        <a href="#/myshop">预览</a>
+    </section>
+</div>
+<!-- 编辑页面 -->
+<div class="edit_page">
+    <!-- input框类型的 -->
+    <div class="type_input">
+        <section class="w100 mt1rem update_perinfo">
+            <input type="text" value="" class="newval" />
+        </section>
+        <section class="w100 packet_info mt1rem">
+            <button class="button_green">确认</button>
+        </section>
+    </div>
+    <!-- 单选按钮类型的 -->
+    <div class="type_radio">
+        <section class="bgwhite w100 mt1rem store_list bodb_padnone">
+            <ul class="personal_data">
+                <li>
+                    <span class="sex"><input type="radio" name="sex" value="1" class="fr sexinput icon_radio"/> 男</span>
+                </li>
+                <li>
+                    <span class="sex"><input type="radio" name="sex" value="0" class="fr sexinput icon_radio" /> 女</span>
+                </li>
+            </ul>
+        </section>
+        <section class="w100 packet_info mt1rem">
+            <button class="button_green">确认</button>
+        </section>
+    </div>
+    <!-- 列表类型的 -->
+    <div class="type_list">
+        <section class="w100 bgimg_choose">
+            <ul class="bg_list_wraper"></ul>
+        </section>
+        <section class="w100 packet_info mt1rem">
+            <button class="button_green">确认</button>
+        </section>
+    </div>
+    <!-- 文本域 -->
+    <div class="type_textarea">
+        <section class="w100 packet_info">
+            <textarea class="myprofile" id="textaea" value=""></textarea>
+            <p class="ftgrey character">可输入<span id="remain"></span>500个字</p>
+        </section>
+        <section class="w100 packet_info">
+            <button class="button_green">确认</button>
+        </section>
+    </div>
+    <!-- 商品列表 -->
+    <div class="type_goods">
+        <section class="bgwhite w100 mt1rem store_list bodb_padnone">
+            <ul class="gs_list_wraper">
+            </ul>
+        </section>
+        <section class="w100 packet_info mt1rem">
+            <button class="button_green add_btn" ng-click="modifyShop()">确认</button>
+        </section>
+    </div>
+</div>
+<input type="hidden" id="field"/>

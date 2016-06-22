@@ -1,0 +1,120 @@
+<style>
+    .nav-left {
+        width: 168px;
+    }
+</style>
+
+<div></div>
+<nav class=" sidebar clear-pd ">
+    <div class="nav-left" style="height:100%;">
+        <h1><span class="nav-logo-border"><img src="dist/images/img_wzlogo.png"/></span></h1>
+        <span class="nav-logo-bbottom"></span>
+
+        <div class="list-group nav-list">
+            <div class="nav nav-pills sidebar-menu nav-menu">
+                <a href="/#meun0" class="nav-header menu-first collapsed auto" data-toggle="collapse"
+                   style="padding-right:-4px;"> <i class="icon-tasks icon"></i> 组织与成员 <span
+                        class="fa fa-angle-left"></span> </a>
+                <ul id="meun0" class="nav nav-list collapse menu-second">
+                    <li><a href="javascript:;" ui-sref=".depList">组织架构 </a></li>
+                    <li><a href="javascript:;" ui-sref=".userInfo">用户管理 </a></li>
+                </ul>
+                <a href="/#meun1" class="nav-header menu-first collapsed auto" data-toggle="collapse"
+                   style="padding-right:-4px;"> <i class="icon-briefcase icon"></i> 业务管理 <span
+                        class="fa fa-angle-left"></span> </a>
+                <ul id="meun1" class="nav nav-list collapse menu-second">
+                    <li><a href="javascript:;">组织机构 </a></li>
+                    <li><a href="javascript:;">组织机构 </a></li>
+                </ul>
+                <a href="/#meun2" class="nav-header menu-first collapsed auto" data-toggle="collapse"
+                   style="padding-right:-4px;"> <i class="icon-bar-chart icon"></i> 数据中心 <span
+                        class="fa fa-angle-left"></span> </a>
+                <ul id="meun2" class="nav nav-list collapse menu-second">
+                    <li><a href="javascript:;">组织机构 </a></li>
+                    <li><a href="javascript:;">组织机构 </a></li>
+                </ul>
+                <a href="/#meun3" class="nav-header menu-first collapsed auto" data-toggle="collapse"
+                   style="padding-right:-4px;"> <i class="icon-shopping-cart icon"></i> 商城管理 <span
+                        class="fa fa-angle-left"></span> </a>
+                <ul id="meun3" class="nav nav-list collapse menu-second">
+                    <li><a href="javascript:;">组织机构 </a></li>
+                    <li><a href="javascript:;">组织机构 </a></li>
+                    <li><a href="javascript:;">组织机构 </a></li>
+                </ul>
+                <a href="/#meun4" class="nav-header menu-first collapsed auto" data-toggle="collapse"
+                   style="padding-right:-4px;"> <i class="icon-money icon"></i> 支付管理 <span
+                        class="fa fa-angle-left"></span> </a>
+                <ul id="meun4" class="nav nav-list collapse menu-second">
+                    <li><a href="javascript:;">组织机构 </a></li>
+                    <li><a href="javascript:;">组织机构 </a></li>
+                    <li><a href="javascript:;">组织机构 </a></li>
+                </ul>
+                <a href="/#meun5" class="nav-header menu-first collapsed auto" data-toggle="collapse"
+                   style="padding-right:-4px;"> <i class="icon-info-sign icon"></i> 消息中心 <span
+                        class="fa fa-angle-left"></span> </a>
+                <ul id="meun5" class="nav nav-list collapse menu-second">
+                    <li><a href="javascript:;">组织机构 </a></li>
+                    <li><a href="javascript:;">组织机构 </a></li>
+                    <li><a href="javascript:;">组织机构 </a></li>
+                </ul>
+                <a href="/#meun6" class="nav-header menu-first collapsed auto" data-toggle="collapse"
+                   style="padding-right:-4px;"> <i class="icon-user icon"></i> 管理员管理 <span
+                        class="fa fa-angle-left"></span> </a>
+                <ul id="meun6" class="nav nav-list collapse menu-second">
+                    <li><a href="javascript:;">组织机构 </a></li>
+                    <li><a href="javascript:;">组织机构 </a></li>
+                    <li><a href="javascript:;">组织机构 </a></li>
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+
+</nav>
+<div id="content-right" class="content-right">
+    <header>
+        <div class="navbar-top">
+
+            <span class="navbar-indent-left"><i class="icon-indent-left"></i></span>
+
+            <p class="navbar-indent-time" ng-controller="TimerCtrl">
+                <span>当前时间：</span>{{clock | date:'yyyy-MM-dd HH:mm'}}</p>
+
+            <div class="btn-group navbar-indent-user nav-menu">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                    <i class="icon-user" alt="操作" title="操作"></i> <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" id="dropdown-menu" style="right:0;">
+                    <li><a href="#/index3/pwdupload">修改密码</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#" data-url="../Auth/login.html">退出</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </header>
+    <div class="main">
+        <div ui-view=""/>
+    </div>
+</div>
+
+
+<!--新增标签-->
+<div id="fade" class="black_overlay"></div>
+<div id="MyDiv" class="white_content">
+    <div class="popdiv_title">提示</div>
+    <div class="clickdiv">
+        <p><span style="float:left; line-height:2rem; color:#333">标签名称：</span><input type="text" name="tagname"
+                                                                                     placeholder="最多输入32个字符"></p>
+
+        <p class="but_li">
+            <button type="submit" class="btn btn-ok">确认</button>
+            <button type="button" class="btn btn-return" onclick="CloseDiv('MyDiv','fade')">取消</button>
+        </p>
+    </div>
+</div>
+<!--新增标签end-->

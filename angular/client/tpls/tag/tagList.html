@@ -1,0 +1,63 @@
+<nav class="zj-navbar bg-white padl-r15">
+    <ul>
+        <li><a href="#/index3/depList">部门</a></li>
+        <li><a href="#/index3/tagList" class="current">标签</a></li>
+    </ul>
+</nav>
+<form class="form-inline form" id="depForm" name="depForm" action="#" method="post">
+    <div class="bg-white clear-both mar15">
+        <div class="modal-body ">
+            <!--如果没有标签显示如下-->
+            <!--style="display:none"-->
+            <div class="tagnone">
+                <i class="icon-tags itag"></i>
+
+                <p>还未创建标签，快去<a href="javascript:;" onclick="ShowDiv('MyDiv','fade')" class="red-start"><b>新建标签</b></a>吧~</p>
+
+                <p>创建标签后，可以按照标签分配不同的权限，并按照标签进行管理。</p>
+            </div>
+            <!--如果没有标签显示内容结束-->
+            <!--如果有标签列表显示如下-->
+            <div class="for-search">
+                <span>
+                   <label for="name">标签名称</label>
+                   <input type="text" class="form-control" name="name" id="name" placeholder="" value="">
+                 </span>
+
+                <p class="zj-pbtnr">
+                    <button class="icon-search red-btn" type="submit" title="查询"></button>
+                    <button class="btn-add" type="button" onclick="ShowDiv('MyDiv','fade')" title="新增标签"><i
+                            class="zj-icon icon-plus"></i></button>
+                </p>
+            </div>
+            <table class="table table-striped table-bordered" width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <th>标签名称</th>
+                    <th>成员</th>
+                    <th>操作</th>
+                </tr>
+                <tr>
+                    <td>永诚员工</td>
+                    <td><a href="#/index3/tageyeuser" class="icon-eye-open icon-tb" title="查看"></a><a
+                            href="#/index3/tagadduser"
+                            class="icon-plus icon-tb"
+                            title="新增"></a><a
+                            href="#" class="icon-upload-alt icon-tb" title="批量导入"></a></td>
+                    <td><a href="javascript:;" class="icon-user icon-tb" onclick="ShowDiv('MyDiv','fade')" title="重命名"></a><a
+                            href="#" class="icon-trash icon-tb" title="删除"></a></td>
+                </tr>
+                <tr>
+                    <td>永诚员工</td>
+                    <td><a href="#/index3/tageyeuser" class="icon-eye-open icon-tb" title="查看"></a><a
+                            href="#/index3/tagadduser"
+                            class="icon-plus icon-tb"
+                            title="新增"></a><a
+                            href="#" class="icon-upload-alt icon-tb" title="批量导入"></a></td>
+                    <td><a href="javascript:;" class="icon-user icon-tb" onclick="ShowDiv('MyDiv','fade')" title="重命名"></a><a
+                            href="#" class="icon-trash icon-tb" title="删除"></a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</form>
+

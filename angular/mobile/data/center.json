@@ -1,0 +1,8 @@
+{
+	"base":{
+		"id":"1",
+		"name":"zhangsan",
+		"identity":"WEB Dev",
+		"level":"8"
+	}
+}

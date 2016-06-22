@@ -1,0 +1,57 @@
+<link rel="stylesheet" type="text/css" href="../libs/mobiscroll/css/mobiscroll.scroller.css">
+<link rel="stylesheet" type="text/css" href="../libs/mobiscroll/css/mobiscroll.scroller.android-ics.css">
+<link rel="stylesheet" href="../libs/jquery-confim/jquery-confirm.min.css?0">
+<div class="wz_body">
+    <!--    -->
+    <form id="newcusForm" class="newcusForm" data-flag="false" ng-submit="processForm()">
+        <section class="bgwhite w100 mt1rem person_list">
+            <ul class="ncustom_ul">
+                <li><label>客户姓名<em class="red_star">*</em></label>
+                    <input type="text" name="name" ng-model="formData.name" value="" placeholder="请输入姓名" />
+                </li>
+                <li><label>联系方式<em class="red_star">*</em></label>
+                    <input type="text" name="tel" ng-model="formData.tel" value="" placeholder="请输入手机号"/>
+                </li>
+                <li><i class="icon icon_select fr"></i><label>证件类型<em class="red_star">&nbsp;</em></label>
+                    <select ng-model="formData.credit_type" ng-options="o.id as o.text for o in card_type" id="credit_type"></select>
+                </li>
+                <li><label>证件号码<em class="red_star">&nbsp;</em></label>
+                    <input type="text" name="credit_code" ng-model="formData.credit_code" value=""
+                           placeholder="请输入证件号码" />
+                </li>
+                <li><i class="icon icon_select fr"></i><label>&#12288;&#12288;性别<em class="red_star">&nbsp;</em></label>
+                    <select ng-model="formData.sex" ng-options="s.value as s.text for s in gender"></select>
+                </li>
+                <li><label>出生日期<em class="red_star">&nbsp;</em></label>
+                    <input type="text" name="birthday" ng-model="formData.birthday" value="" placeholder="年-月-日"/>
+                </li>
+                <li><label>选择地区<em class="red_star">&nbsp;</em></label>
+                    <input id="area" name="area" placeholder="请选择所在地区" value=""  readonly="" class="">
+                </li>
+                <li><label>详细地址<em class="red_star">&nbsp;</em></label>
+                    <input type="text" name="address" ng-model="formData.address" value="" placeholder="街道门牌信息"/>
+                </li>
+                <li><label>&#12288;&#12288;备注<em class="red_star">&nbsp;</em></label>
+                    <input type="text" name="remark" ng-model="formData.remark" value="" placeholder="备注信息"/>
+                </li>
+            </ul>
+        </section>
+        <section class="w100 mt1rem packet_info">
+            <button type="submit" class="button_green">确认</button>
+        </section>
+    </form>
+</div>
+<script src="../libs/mobiscroll/js/mobiscroll.core.js" type="text/javascript"></script>
+<script src="../libs/mobiscroll/js/mobiscroll.scroller.js" type="text/javascript"></script>
+<script src="../libs/mobiscroll/js/mobiscroll.area.js"></script>
+<script type="text/javascript" src="../libs/mobiscroll/js/mobiscroll.i18n.zh.js"></script>
+<!--提示框插件 Start -->
+<script src="../libs/jquery-confim/jquery-confirm.min.js"></script>
+<!--提示框插件 End -->
+<!--验证文件 Start -->
+<script type="text/javascript" src="../libs/validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../libs/validate/additional-methods.min.js"></script>
+<script type="text/javascript" src="src/js/verification.js"></script>
+<!--验证文件 End -->
+
+

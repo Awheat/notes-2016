@@ -1,0 +1,132 @@
+<!-- 我的伙伴 -->
+<link rel="stylesheet" type="text/css" href="../libs/mobiscroll/css/mobiscroll.scroller.css">
+<link rel="stylesheet" type="text/css" href="../libs/mobiscroll/css/mobiscroll.scroller.android-ics.css">
+<link rel="stylesheet" href="../libs/jquery-confim/jquery-confirm.min.css?0">
+<div class="wz_body">
+    <section class="bgwhite w100 person_info borbnone">
+        <p><i class="icon icon_notice fl" style="margin-top:.8rem;"></i><em class="ftgrey" style="line-height:1.6rem; font-size:.9rem; display:inline-block;">您今日成功邀请X位伙伴<br>已经累计邀请了X位伙伴~fighting！</em></p>
+    </section>
+    <section class="w100 partner_info borbnone">
+        <ul class="list">
+            <li><a class="show" name="MyDiv" name1="fade">排序</a></li>
+            <li><a class="show" name="MyDiv1" name1="fade1">筛选</a></li>
+            <li><a class="show" name="MyDiv2" name1="fade2">搜索</a></li>
+        </ul>
+    </section>
+    <section class="bgwhite w100 mt1rem store_list bodb_padnone" ng-repeat="list in list">
+        <ul class="partner_list">
+            <li>
+                <span class="fr mt1rem"><i class="icon icon_oranwech" onclick="popWeiXin(this)" data-value="{{list.weixinid}}"></i> <i class="icon icon_oranptel" onclick="popShouJi(this)" data-value="{{list.mobile}}"></i></span>
+                <img src="" ng-src="{{list.pic}}" class="fl person_pics" />
+                <h4 class="mart04">{{list.name}} &nbsp;<em class="ftgrey ft09r">{{getStatusText(list.status)}}</em></h4>
+                <p class="ftgrey">{{list.create_time}} 入团</p>
+            </li>
+            <li class="insur_li">
+                <span>￥{{list.totalpremium}}<br><em class="ftgrey">总保费</em></span>
+                <span>￥{{list.monthpremium}}<br><em class="ftgrey">本月保费</em></span>
+                <span><em class="ftgrey">本月保单</em> {{list.monthdan}}<br><em class="ftgrey">总保单数</em> {{list.totaldan}}</span>
+            </li>
+        </ul>
+    </section>
+</div>
+<div ng-show="tips" style="padding:20px 0 0 0;text-align: center;color: #929292;font-size: .9rem;background: #efeff4;'">没有相关数据</div>
+<!--点击排序弹出框-->
+<div id="fade" class="black_overlay2" onClick="CloseDiv('MyDiv','fade')"></div>
+<div id="MyDiv" class="white_content2">
+    <section class="bgwhite w100 partner_search">
+        <ul>
+            <li onClick="CloseDiv('MyDiv','fade')" data-field="create_time"><a>加入时间从近到远</a></li>
+            <li onClick="CloseDiv('MyDiv','fade')" data-field="monthpremium"><a>当月保费从高至低</a></li>
+            <li onClick="CloseDiv('MyDiv','fade')" data-field="totalpremium"><a>保费总额从高至低</a></li>
+            <li onClick="CloseDiv('MyDiv','fade')" data-field="monthdan"><a>当月单数从高至低</a></li>
+            <li onClick="CloseDiv('MyDiv','fade')" data-field="totaldan"><a>保单总数从高至低</a></li>
+        </ul>
+    </section>
+</div>
+<!--点击排序弹出框end-->
+
+<!--点击筛选-->
+<div id="fade1" class="black_overlay2" onClick="CloseDiv('MyDiv1','fade1')"></div>
+<div id="MyDiv1" class="white_content2">
+    <section class="bgwhite w100 partner_search">
+        <ul>
+            <li onClick="CloseDiv('MyDiv1','fade1')" data-id="3"><a>已开店</a></li>
+            <li onClick="CloseDiv('MyDiv1','fade1')" data-id="1"><a>未认证</a></li>
+            <li onClick="CloseDiv('MyDiv1','fade1')" data-id="0"><a>未关注</a></li>
+            <li onClick="CloseDiv('MyDiv1','fade1')" data-id="4"><a>认证未通过</a></li>
+        </ul>
+    </section>
+</div>
+<!--点击筛选end-->
+
+<!--点击搜索-->
+<div id="fade2" class="black_overlay2" onClick="CloseDiv('MyDiv2','fade2')"></div>
+<div id="MyDiv2" class="white_content2">
+    <section class="bgwhite w100 partner_search">
+        <ul>
+            <li class="mab1"><input type="text" id="start_time" name="start_time" value="" placeholder="加入开始时间"> - <input type="text" id="end_time" name="end_time"  value="" placeholder="加入结束时间"></li>
+            <li><input type="text" value="" placeholder="按姓名查询" class="input_searcw"> <button class="button_green">确认</button></li>
+        </ul>
+    </section>
+</div>
+<script type="text/javascript" language="javascript" >
+    $(".show").click(function(){
+        var name = $(this).attr("name");
+        var name1 = $(this).attr("name1");
+        if(name == "MyDiv2"){
+            $("#"+name).find("input").val("");
+        }
+        $(".list").find("li").each(function(index, element) {
+            $("#"+$(this).find("a").attr("name")).attr("style","none");
+            $("#"+$(this).find("a").attr("name1")).attr("style","none");
+        });
+        document.getElementById(name).style.display='block';
+        document.getElementById(name1).style.display='block';
+    });
+    //弹出层
+    function CloseDiv(show_div,bg_div){
+        document.getElementById(show_div).style.display='none';
+        document.getElementById(bg_div).style.display='none';
+    };
+    function popWindow(title,content){
+        $.alert({
+            theme:'white',
+            title: title,
+            content: content,
+            confirmButton:'确认'
+        });
+    }
+    function popWeiXin(_this){
+        popWindow("微信~",$(_this).attr("data-value"));
+    }
+    function popShouJi(_this){
+        popWindow("电话~",$(_this).attr("data-value"));
+    }
+
+</script>
+<!--点击搜索end-->
+<script type="text/javascript" src="../libs/mobiscroll/js/mobiscroll_date.js" charset="gb2312"></script>
+<script type="text/javascript" src="../libs/mobiscroll/js/mobiscroll.js"></script>
+<script type="text/javascript" src="../libs/mobiscroll/js/mobiscroll.i18n.zh.js"></script>
+<script src="../libs/jquery-confim/jquery-confirm.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var currYear = (new Date()).getFullYear();
+        var opt={};
+        opt.date = {preset : 'date'};
+        //opt.datetime = { preset : 'datetime', minDate: new Date(2012,3,10,9,22), maxDate: new Date(2014,7,30,15,44), stepMinute: 5  };
+        opt.datetime = {preset : 'datetime'};
+        opt.time = {preset : 'time'};
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式
+            mode: 'scroller', //日期选择模式
+            lang:'zh',
+            startYear:currYear - 10, //开始年份
+            endYear:currYear + 10 //结束年份
+        };
+        $("#start_time").val('').scroller('destroy').scroller($.extend(opt['date'], opt['default']));
+        $("#end_time").val('').scroller('destroy').scroller($.extend(opt['date'], opt['default']));
+
+    });
+</script>

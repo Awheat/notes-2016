@@ -1,0 +1,94 @@
+<!-- 我的微店 -->
+<link rel="stylesheet" href="../libs/swiper/swiper.min.css">
+<link rel="stylesheet" href="../libs/jquery-confim/jquery-confirm.min.css?0">
+<style>div.content{text-align: center;}</style>
+<div class="wz_body">
+    <section class="w100 packet_info bg_storetop">
+        <img src="{{baseinfo.bgpic}}" class="shop_bg"/>
+        <span><a href="#/modifyshop"><i class="icon icon_edit"></i>修改</a></span>
+        <img src="{{baseinfo.photo}}" class="fl img_circle">
+        <h3>{{baseinfo.name}}</h3>
+    </section>
+    <section class="bggrey w100 store_info pad0rem bortnone">
+        <ul>
+            <li id="myshop-ewm">
+                <i class="icon icon_code"></i><br/>
+                <em class="ftgrey">二维码</em>
+                <input type="hidden" value="dist/images/img-person.png"/>
+            </li>
+            <li id="myshop-phone">
+                <i class="icon icon_ptel"></i><br/>
+                <em class="ftgrey">电话</em>
+                <input type="hidden" value="{{baseinfo.tel}}"/>
+            </li>
+            <li id="myshop-wechat">
+                <i class="icon icon_wech "></i><br/>
+                <em class="ftgrey">微信</em>
+                <input type="hidden" value="{{baseinfo.wechat}}"/>
+            </li>
+            <li id="myshop-qq">
+                <i class="icon icon_qq"></i><br/>
+                <em class="ftgrey">QQ</em>
+                <input type="hidden" value="{{baseinfo.qq}}"/>
+            </li>
+        </ul>
+    </section>
+    <section class="bgwhite w100 mt1rem store_info">
+        <h3 class="ftgrey">个人简介</h3>
+        <p>{{baseinfo.descr}}</p>
+    </section>
+    <section class="bgwhite w100 mt1rem store_info">
+        <h3 class="ftgrey">个人风采</h3>
+        <div class="swiper-container swiper-container-horizontal">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" ng-repeat="slider in baseinfo.slider" on-finish-render><img src="" ng-src="{{slider.pic}}" /></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </section>
+    <section class="bgwhite w100 mt1rem store_list bodb_padbnone">
+        <h3 class="ftgrey">个人店铺</h3>
+        <ul>
+            <li ng-repeat="shop in baseinfo.shop">
+                <i class="icon icon_ahref fr"></i>
+                <img src="" ng-src="{{shop.pic}}" class="fl" />
+                <h4>{{shop.name}}</h4>
+                <p class="ftgrey">{{shop.describe}}</p>
+            </li>
+        </ul>
+    </section>
+</div>
+<!--<input type="hidden" value="{{baseinfo.id}}" id="user_id"/>-->
+<script src="../libs/swiper/swiper.min.js"></script>
+<script src="../libs/jquery-confim/jquery-confirm.min.js"></script>
+<script>
+    function popBox(_title,_cont){
+        $.confirm({
+            theme:'white',
+            title: _title,
+            content: _cont,
+            confirmButton:'确认',
+            cancelButton:"取消"
+        });
+    }
+    $("#myshop-ewm").click(function(){
+        var src ='http://b.bshare.cn/barCode?site=weixin&url='+window.location.href;
+        $.alert({
+            theme:'white',
+            title: '开心扫一扫~',
+            content: '<img src="'+src+'">',
+            confirmButton:'确认'
+        });
+    });
+    $("#myshop-phone").on("click",function(){
+        popBox("电话~",$(this).find("input[type='hidden']").val());
+    });
+    $("#myshop-wechat").on("click",function(){
+        popBox("微信号~",$(this).find("input[type='hidden']").val());
+    });
+    $("#myshop-qq").on("click",function(){
+        popBox("QQ~",$(this).find("input[type='hidden']").val());
+    });
+</script>

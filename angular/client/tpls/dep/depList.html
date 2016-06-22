@@ -1,0 +1,131 @@
+<nav class="zj-navbar bg-white padl-r15">
+    <ul>
+        <li><a href="#/index3/depList" class="current">部门</a></li>
+        <li><a href="#/index3/tagList">标签</a></li>
+    </ul>
+</nav>
+<div class="main">
+    <form class="form" id="depForm" name="depForm" action="#" method="post">
+
+        <div class="bg-white clear-both mar15">
+            <div class="modal-body">
+                <table class="table table-striped table-hover tree_table" width="100%" border="0" cellspacing="0"
+                       cellpadding="0" id="treeTable1">
+                    <tr>
+                        <th>部门名称</th>
+                        <th>负责人</th>
+                        <th>联系方式</th>
+                        <th>部门地址</th>
+                        <th>操作</th>
+                    </tr>
+                    <tbody>
+
+                    <tr id="1" haschild="true" previd="" islastone="true" depth="1">
+                        <td><span controller="true" style="cursor: pointer;">微众营创</span></td>
+                        <td>张三</td>
+                        <td>010-5678888</td>
+                        <td>上海市浦东新区</td>
+                        <td><a class="icon-tb icon-plus" title="添加" href="#/index3/depAdd"></a><a
+                                class="icon-tb icon-pencil" title="编辑" href="#/index3/depEdit"></a><a
+                                class="icon-tb icon-trash" title="删门" href="/#"></a></td>
+                    </tr>
+                    <tr id="57" pid="1" haschild="1" class="pageFlag 1" isfirstone="true" depth="2">
+                        <td>华北战区</td>
+                        <td>张三</td>
+                        <td>010-5678888</td>
+                        <td>上海市浦东新区</td>
+                        <td><a class="icon-tb icon-plus" title="添加" href="#/index3/depAdd"></a><a
+                                class="icon-tb icon-pencil" title="编辑" href="#/index3/depEdit"></a><a
+                                class="icon-tb icon-trash" title="删门" href="/#"></a></td>
+                    </tr>
+                    <tr id="266" pid="57" haschild="" class="57" isfirstone="true" depth="3"
+                        style="display: table-row;">
+                        <td>北京</td>
+                        <td>张三</td>
+                        <td>010-5678888</td>
+                        <td>上海市浦东新区</td>
+                        <td><a class="icon-tb icon-plus" title="添加" href="#/index3/depAdd"></a><a
+                                class="icon-tb icon-pencil" title="编辑" href="#/index3/depEdit"></a><a
+                                class="icon-tb icon-trash" title="删门" href="/#"></a></td>
+                    </tr>
+                    <tr id="270" pid="57" haschild="" class="57" previd="266" depth="3" style="display: table-row;">
+                        <td>天津</td>
+                        <td>张三</td>
+                        <td>010-5678888</td>
+                        <td>上海市浦东新区</td>
+                        <td><a class="icon-tb icon-plus" title="添加" href="#/index3/depAdd"></a><a
+                                class="icon-tb icon-pencil" title="编辑" href="#/index3/depEdit"></a><a
+                                class="icon-tb icon-trash" title="删门" href="/#"></a></td>
+                    </tr>
+                    <tr id="271" pid="57" haschild="" class="57" previd="270" depth="3" style="display: table-row;">
+                        <td>河北</td>
+                        <td>张三</td>
+                        <td>010-5678888</td>
+                        <td>上海市浦东新区</td>
+                        <td><a class="icon-tb icon-plus" title="添加" href="#/index3/depAdd"></a><a
+                                class="icon-tb icon-pencil" title="编辑" href="#/index3/depEdit"></a><a
+                                class="icon-tb icon-trash" title="删门" href="/#"></a></td>
+                    </tr>
+                    <tr id="60" pid="1" haschild="1" class="pageFlag 1" previd="57" depth="2">
+                        <td>华东战区</td>
+                        <td>张三</td>
+                        <td>010-5678888</td>
+                        <td>上海市浦东新区</td>
+                        <td><a class="icon-tb icon-plus" title="添加" href="#/index3/depAdd"></a><a
+                                class="icon-tb icon-pencil" title="编辑" href="#/index3/depEdit"></a><a
+                                class="icon-tb icon-trash" title="删门" href="/#"></a></td>
+                    </tr>
+                    <tr id="272" pid="60" haschild="" class="60" previd="272" depth="3" style="display: table-row;">
+                        <td>上海</td>
+                        <td>张三</td>
+                        <td>010-5678888</td>
+                        <td>上海市浦东新区</td>
+                        <td><a class="icon-tb icon-plus" title="添加" href="#/index3/depAdd"></a><a
+                                class="icon-tb icon-pencil" title="编辑" href="#/index3/depEdit"></a><a
+                                class="icon-tb icon-trash" title="删门" href="/#"></a></td>
+                    </tr>
+                    <tr id="286" pid="1" haschild="1" class="pageFlag 1" previd="60" depth="2">
+                        <td>苏州分公司</td>
+                        <td>张三</td>
+                        <td>010-5678888</td>
+                        <td>上海市浦东新区</td>
+                        <td><a class="icon-tb icon-plus" title="添加" href="#/index3/depAdd"></a><a
+                                class="icon-tb icon-pencil" title="编辑" href="#/index3/depEdit"></a><a
+                                class="icon-tb icon-trash" title="删门" href="/#"></a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <nav class="page">
+            <button type="button" class="but-checkall"><i class="zj-icon icon-table"></i> 导出表格</button>
+        </nav>
+    </form>
+</div>
+
+<link href="../libs/treeTable/vsStyle/jquery.treeTable.css" rel="stylesheet"/>
+<script type="text/javascript" src="../libs/treeTable/vsStyle/jquery.treeTable.js"></script>
+<script>
+    $(function(){
+        var option = {
+            theme:'vsStyle',
+            expandLevel : 2,
+            beforeExpand : function($treeTable, id) {
+                //判断id是否已经有了孩子节点，如果有了就不再加载，这样就可以起到缓存的作用
+                if ($('.' + id, $treeTable).length) { return; }
+                //这里的html可以是ajax请求
+                $.post('',{id:id},function(msg){
+                    if(msg == false){
+                        return false;
+                    }else{
+                        $treeTable.addChilds(msg);
+                    }
+                });
+            },
+            onSelect : function($treeTable, id) {
+                window.console && console.log('onSelect:' + id);
+            }
+        };
+        $('#treeTable1').treeTable(option);
+    });
+</script>

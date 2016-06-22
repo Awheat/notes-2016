@@ -1,0 +1,50 @@
+<nav class="zj-navbar bg-white padl-r15">
+    <ul>
+        <li><a href="#/index3/certifList">认证审核</a></li>
+        <li><a href="#/index3/userInfo">用户信息</a></li>
+        <li><a href="#/index3/infoExport"  class="current">信息导出</a></li>
+    </ul>
+</nav>
+    <form class="form-inline form" id="depForm" name="depForm" action="#" method="post">
+        <div class="bg-white clear-both mar15">
+            <div class="modal-body info-list">
+                <h4>证件照片批量导出</h4>
+                <ul>
+                    <li>通过时间：
+                        <span><input type="radio" name="time"> 最近一个月</span>
+                        <span><input type="radio" name="time"> 最近一周</span>
+                        <span>开始时间 <input type="text" class="form-control laydate-icon clear-border" id="start" name="start_date" /> 截止时间 <input type="text" class="form-control laydate-icon clear-border" id="end" name="end_date" /> &nbsp;<em class="red-start">时间跨度最多在31天</em></span>
+                    </li>
+                    <li>所属机构：<select id="organ" name="organ" class="form-control">
+                        <option value="">请选择</option>
+                        <option value="1">测试1</option>
+                        <option value="2">普通管理员</option>
+                        <option value="3">管理员管理权限</option>
+                        <option value="4">其实aa11</option>
+                    </select>
+                </ul>
+                <div class="zj-button clear-both" >
+                    <button type="submit" class="btn btn-ok padl-r110">导出</button>
+                </div>
+
+                <h4>电子协议批量导出</h4>
+                <ul>
+                    <li>签署时间：
+                        <span><input type="radio" name="time"> 最近一个月</span>
+                        <span><input type="radio" name="time"> 最近一周</span>
+                        <span>开始时间 <input type="text" class="form-control laydate-icon clear-border" id="start1" name="start_date" /> 截止时间 <input type="text" class="form-control laydate-icon clear-border" id="end1" name="end_date" /> &nbsp;<em class="red-start">时间跨度最多在31天</em></span>
+                    </li>
+                    <li>所属机构：<select id="organ" name="organ" class="form-control">
+                        <option value="">请选择</option>
+                        <option value="1">测试1</option>
+                        <option value="2">普通管理员</option>
+                        <option value="3">管理员管理权限</option>
+                        <option value="4">其实aa11</option>
+                    </select>
+                </ul>
+                <div class="zj-button clear-both" >
+                    <button type="submit" class="btn btn-ok padl-r110">导出</button>
+                </div>
+            </div>
+        </div>
+    </form>

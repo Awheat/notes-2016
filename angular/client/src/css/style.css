@@ -1,0 +1,297 @@
+/* CSS Document */
+@charset "utf-8";
+header{
+	height: 55px;
+}
+
+/*====其他=====*/
+*{ 
+	margin:0; padding:0;
+}
+.clear-border{
+	border:  none !important;
+}
+.padl-r15{
+	padding:0 15px;
+}
+.pad20{
+	padding:20px;
+}
+.pad5{
+	padding-top: 5px;
+}
+.padt20{
+	padding-top:20px;
+}
+.padl-r70{
+	padding:0 70px;
+}
+.padl-r110{
+	padding:0 110px;
+}
+.clear-both{
+	clear:both;
+}
+.bg-white{ 
+	background:#FBFCFF;
+}
+.mar15{
+	margin:15px;
+}
+.fl{ 
+	float:left;
+}
+li{ 
+	list-style:none
+}
+.wb100{
+	width:100%;
+}
+.marl10{
+	margin-left:10px;
+}
+.padl-r10{
+	padding-right: 10px;
+}
+.flt14{ font-size:14px;}
+.red-start{
+	color:#F00;
+}
+em{
+	font-style:normal;
+}
+/*=====右侧tab菜单====*/
+.zj-navbar{ 
+	width:100%;
+	float:left; 
+	height:55px;
+	line-height:55px;
+	border-bottom:#e5eaeb 1px solid;
+	margin-bottom:15px;
+}
+.zj-navbar ul li{ 
+	float:left;
+	margin-right:10px;
+}
+.zj-navbar ul li a{ 
+	color:#1c2b36; 
+	font-size:14px; 
+	font-weight:bold; 
+	display:inline-block; 
+	padding:0 15px;
+	height:54px;
+}
+.zj-navbar ul li a:hover,
+.zj-navbar ul li a.current{
+	border-bottom:#1d2c33 2px solid;
+	text-decoration:none;
+}
+/*======按钮========*/
+button{ 
+	color:#fff; 
+	cursor:pointer; 
+	border:none;
+	font-size:16px;
+	border-radius:5px; 
+    padding: 8px 9px;
+}
+.btn-add{ 
+	padding:5px 10px; 
+	background:#20aad1;
+}
+.blue-btn{
+	background:#20aad1;
+    padding: 8px 9px;
+}
+.zj-pbtn{ 
+	float:left;
+	padding:5px;
+	background:#a7becb;
+	border:#93acba 1px solid;
+}
+.zj-pbtn a{
+	color:#2c4b5d;
+}
+.zj-pbtnr{
+	float:right;
+}
+.zj-button{
+	padding: 15px;
+    text-align: right;
+}
+.zj-button .btn{
+	height:54px;
+	width:auto;
+	font-size:16px;
+}
+.zj-button .btn:hover{
+	color:#fff;
+	font-size:16px;
+}
+.btn-return{
+	background:#1d2b36;
+}
+.btn-ok{
+	background:#20aad1;
+	margin-left:20px;
+}
+.but-icon{ 
+	padding:1px 10px; 
+	color:#fff; 
+	margin-left:15px;
+}
+.but-blue{ 
+	background:#3cbebc;
+}
+.but-yello{ 
+	background:#f4bb4a;
+}
+.but-red{ 
+	background:#f84d55;
+}
+.but-green{ 
+	background:#4dbd73;
+}
+.but-checkall{
+	background:#fff;
+	color:#999;
+	font-size:12px;
+    border: #E3E7EC 1px solid;
+    padding:7px 12px;
+    border-radius: 3px;
+	margin-left:10px;
+}
+/*=====小图标=====*/
+/*.icon-plus{ 
+	font-size:16px;
+}*/
+.icon-home{
+	font-size:20px;
+}
+.zj-icon {
+	font-style:normal;
+	display:inline-block;
+}
+.icon-tb{ 
+	color:#1c2b36;
+	padding:0 5px;
+}
+.icon-tb:hover{
+	color:#ed6d00;
+	text-decoration:none;
+	background:none;
+}
+i.itag{
+	color:#ed6d00;
+	font-size:60px;
+}
+/*=====表格====*/
+table th,
+table td{
+	text-align:center;
+	height:38px;
+	line-height:38px;
+}
+table th{
+	height:45px;
+	height:45px;
+    background:#e9eef1;
+}
+table tr:hover td{
+    background:#f0f4f7;
+}
+.table-striped>tbody>tr:nth-of-type(odd){
+	background-color:#F7FAFC;
+}
+/*====当前位置====*/
+.zj-position{
+    width:100%;
+	float:left; 
+	height:55px;
+	line-height:55px;
+	border-bottom:#e5eaeb 1px solid;
+	margin-bottom:15px;
+	font-weight:600;
+}
+.zj-position span{
+	padding:0 20px;
+}
+.zj-position a{
+	color:#1c2b36;
+}
+/*====表单====*/
+input,
+textarea{
+	background-color:#edf1f2; 
+	border:1px solid #e5eaeb;
+	border-radius:5px;
+}
+input[type="text"]{ 
+	height:34px; 
+	line-height:34px;
+}
+.w200{ 
+	width:200px;
+}
+.w300{ 
+	width:300px;
+}
+input[type="checkbox"]{
+	border:#6b8288 1px solid;
+	margin-right:5px;
+}
+/*====不要动====*/
+.sidebar{
+	position: fixed;
+	height: 100%;
+	width: 168px;
+	background-color: #1c2b36;
+	z-index: 10;
+}
+.content-right{
+	padding-left:168px;
+	width: 100%;
+}
+
+.page{
+	padding: 0 30px;
+}
+.page .dow{
+	border: 1px solid #e5eaeb;
+	color: #566164;
+	background-color: #FBFCFF;
+	padding: 7px 10px;
+	font-size: 12px;
+}
+.page-list{
+	float: right;
+}
+.page-list li{
+	float: left;
+	padding: 5px 10px;
+	margin: 0 5px;
+	border-radius: 3px;
+	border: 1px solid #e5eaeb;
+	color: #566164;
+	background-color: #FBFCFF;
+}
+.page-list li:hover,.page a:hover,.page-list li.current{
+	background-color: #20aad1;
+}
+.page-list li:hover a,.page-list li.current a{
+	color:#fff;
+	text-decoration:none;
+}
+.page-list li a{
+	color: #566164;
+}
+.erorr-warn{
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+}
+.input-error{
+	border:#FF004A 1px solid;
+	box-shadow: 0 0 5px #FF004A;
+    -webkit-box-shadow: 0 0 5px #FF004A;	
+}
+
+

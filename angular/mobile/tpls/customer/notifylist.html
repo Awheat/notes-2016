@@ -1,0 +1,19 @@
+<div class="wz_body">
+    <section class="bgwhite w100 mt1rem store_list bodb_padnone">
+        <ul class="notify_wraper">
+            <li ng-repeat="bir in bir_list" data-type="{{bir.id}}">
+                <span class="fr mt1rem ftgrey ft09r"><em class="ftorange ft1r">{{bir.surplus}}</em>天</span>
+                <img src="dist/images/img-festival.png" class="fl bornone" />
+                <h4 class="marb0">{{bir.custom_name}}</h4>
+                <p class="ftgrey">生日快到了，快去送好友祝福吧</p>
+            </li>
+            <li ng-repeat="holi in holi_list" data-type="{{holi.id}}">
+                <span class="fr mt1rem ftgrey ft09r"><em class="ftorange ft1r">{{holi.surplus}}</em>天</span>
+                <img src="dist/images/img-festival.png" class="fl bornone" />
+                <h4 class="marb0">{{holi.name}}</h4>
+                <p class="ftgrey">节日快到了，快去送好友祝福吧</p>
+            </li>
+        </ul>
+    </section>
+</div>
+</body>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="layoutApp" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title ng-controller="pageTitle" ng-bind="(title ? title: '微众')"></title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="dist/css/style.min.css?0">
+</head>
+<body>
+    <div ui-view id="layout"></div>
+</body>
+<script type="text/javascript" src="../libs/jquery/dist/jquery.min.js"></script>
+<!-- Angularjs Start  -->
+<script type="text/javascript" src="../libs/angular/angular.min.js"></script>
+<script type="text/javascript" src="../libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<!-- Angularjs End  -->
+</html>

@@ -1,0 +1,58 @@
+<div class="main">
+    <section class="zj-position bg-white padl-r15"><i class="zj-icon icon-home"></i> <a
+            href="#/index3/welcome">首页</a><span>|</span><a
+            href="#/index3/depList">组织架构</a><span>|</span><a href="#/index3/tagList">标签</a><span>|</span>查看成员
+    </section>
+    <form class="form" id="tageyeForm" name="tageyeForm" action="#" method="post">
+        <div class="bg-white clear-both mar15">
+            <div class="modal-body ">
+                <h4>所属标签：永诚保险</h4>
+                <table class="table table-striped table-bordered" width="100%" border="0" cellspacing="0"
+                       cellpadding="0">
+                    <tr>
+                        <th>选择</th>
+                        <th>姓名</th>
+                        <th>手机</th>
+                        <th>部门</th>
+                        <th>操作</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="tag_check"/></td>
+                        <td><img src="dist/images/img-person.png" class="imgperson"/> 张三</td>
+                        <td>15236985463</td>
+                        <td>永诚-上海分公司</td>
+                        <td><a href="#" class="icon-remove icon-tb" title="移除"></a></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="tag_check"/></td>
+                        <td><img src="dist/images/img-person.png" class="imgperson"/>张三</td>
+                        <td>15236985463</td>
+                        <td>永诚-上海分公司</td>
+                        <td><a href="#" class="icon-remove icon-tb" title="移除"></a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="text-left"><input type="checkbox" id="tagcheck" value="0"/> <label
+                                for="tagcheck">全选</label>
+                            <button type="button" class="but-checkall">删除选中标签</button>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <nav class="page">
+            <ul class="page-list" id="pageBar">
+                <li class="current"><a class="current">1</a></li>
+                <li><a class="num" href="#">2</a></li>
+                <li><a class="next" href="#"><span aria-hidden="true">»</span></a></li>
+            </ul>
+        </nav>
+    </form>
+</div>
+
+<script type="text/javascript">
+    $("#tagcheck").click(function () {
+        $("input[name='tag_check']").attr("checked", $(this).attr("checked"));
+    });
+</script>
+

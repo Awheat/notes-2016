@@ -1,0 +1,44 @@
+<div class="wz_body">
+    <section class="w100 store_list bodb_padnone bg_custorm">
+        <ul>
+            <li>
+                <span class="fr mt1rem ft09r"><em class="ftorange">{{days}}</em>天</span>
+                <img src="dist/images/img-person.png" class="fl bornone"/>
+                <h4 class="marb0">{{name}}</h4>
+
+                <p class="ftgrey">{{tips}}</p>
+            </li>
+        </ul>
+    </section>
+    <section class="w100 mt1rem bgwhite store_list">
+        <article class="packet_info w100">
+            <textarea class="myprofile" id="textarea">{{message}}</textarea>
+        </article>
+        <article class="w100 mt1rem packet_info">
+            <button type="submit" class="button_green fr w48" onClick="ShowDiv('MyDiv','fade')">发送祝福</button>
+            <button type="button" class="button_grey w48" id="btn_switch">换一个</button>
+        </article>
+    </section>
+</div>
+<!--点击分享start-->
+<div class="main1">
+    <div id="fade" class="black_overlay"><img src="dist/images/weinxin_share1.png" onClick="CloseDiv('MyDiv','fade')"/></div>
+    <div id="MyDiv" class="white_content" style="background:none; border:none; z-index:0;">
+    </div>
+</div>
+<!--点击分享end-->
+<script type="text/javascript">
+    //弹出隐藏层
+    function ShowDiv(show_div, bg_div) {
+        document.getElementById(show_div).style.display = 'block';
+        document.getElementById(bg_div).style.display = 'block';
+        var bgdiv = document.getElementById(bg_div);
+        bgdiv.style.width = document.body.scrollWidth;
+        $("#" + bg_div).height($(document).height());
+    };
+    //弹出层
+    function CloseDiv(show_div, bg_div) {
+        document.getElementById(show_div).style.display = 'none';
+        document.getElementById(bg_div).style.display = 'none';
+    };
+</script>

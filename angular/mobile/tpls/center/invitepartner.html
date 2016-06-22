@@ -1,0 +1,67 @@
+<style>
+    button.disable{background: #e0e0e0;text-align: center;}
+    div.wz_body{display: none;}
+    div.step2{display: none;}
+    div.switch{display: block;}
+    div.content{text-align: center;line-height: 180%;font-size: 14px;font-family: "Helvetica Neue";}
+</style>
+<link rel="stylesheet" href="../libs/jquery-confim/jquery-confirm.min.css?0">
+<!-- 实名认证 -->
+<div class="wz_body switch">
+        <section class="bgwhite w100 card_info mt1rem">
+            <ul>
+                <li>
+                    <input type="text" name="name" placeholder="姓名"  ng-model="formDate.name" />
+                </li>
+                <li>
+                    <input type="tel" name="tel" placeholder="请输入手机号"/>
+                    <button type="button" class="button_orange" id="getcheckcode">获取验证码</button>
+                </li>
+                <li>
+                    <input type="text" name="code" placeholder="请输入验证码"/>
+                </li>
+            </ul>
+        </section>
+        <section class="ftgrey ft09r tel_explain"><em class="red_star">*</em> 请确认您的手机号已经绑定当前使用微信，否则收不到开店邀请哦~</section>
+        <section class="padlr1">
+            <button type="button" class="button_green">实名认证</button>
+            <p class="ftgrey ft09r padt1"><input type="checkbox" id="chkbox"/> 我已阅读并同意签署<a href="" class="red_star">《非全日制用工协议》</a></p>
+        </section>
+        <section class="ftgrey ft09r tel_explain"><em class="red_star">*</em> 您在微众平台提供服务过程中产生的服务费用及红包奖励等将直接支付到您的微信钱包中，故需要对您的身份进行实名验证，本平台承诺您提交的身份信息仅用于实名审核，绝不滥用、泄露您的个人信息~</section>
+</div>
+<!-- 上传身份证 -->
+<div class="step2">
+    <form name="form" id="carduploadForm" class="carduploadForm" method="post" action="#">
+        <section class="bgwhite w100 card_upload mt1rem">
+            <dl>
+                <dt>身份证正面</dt>
+                <dd>
+                <span class="bor_img">
+                   <img src="dist/images/icon-06.png">
+                </span>
+                    <span class="card_img card_obverse fr"></span>
+                </dd>
+            </dl>
+            <dl>
+                <dt>身份证正面</dt>
+                <dd>
+                <span class="bor_img">
+                   <img src="dist/images/icon-06.png">
+                </span>
+                    <span class="card_img card_back fr"></span>
+                </dd>
+            </dl>
+            <dl>
+                <dd>
+                    <input type="text" name="cardcode" placeholder="请输入身份证号" value="" required />
+                </dd>
+            </dl>
+        </section>
+
+        <section class="padlr1 mt1rem">
+            <button type="button" class="button_green w48 fr">提交审核</button>
+            <button type="button" class="button_grey w48">上一步</button>
+        </section>
+    </form>
+</div>
+<script src="../libs/jquery-confim/jquery-confirm.min.js"></script>

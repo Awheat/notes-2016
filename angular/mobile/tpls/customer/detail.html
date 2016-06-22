@@ -1,0 +1,61 @@
+<div class="wz_body">
+    <section class="bgwhite w100 person_info">
+        <em class="fr mt1rem"><a href="tel:{{usinfo.tel}}" id="detail_tel" class="icon icon_oranptel"></a></em>
+        <img src="{{usinfo.pic}}" class="fl">
+
+        <h3>{{usinfo.name}}<em class="ftgrey">&#12288;{{usinfo.sex==1?"男":"女"}}</em></h3>
+
+        <p class="ftgrey"><i class="icon icon_gift"></i>{{usinfo.birthday}}</p>
+    </section>
+    <!--tag标题-->
+    <ul id="nav">
+        <li><a class="selected">基本信息</a></li>
+        <li><a class="request">购买记录</a></li>
+    </ul>
+    <!--基本信息-->
+    <div id="menu_con">
+        <div class="tag" style="display:block">
+            <section class="bgwhite w100 person_list">
+                <ul class="ncustom_ul">
+                    <li><label class="ftgrey">证件类型</label>
+                        <span>{{card_type}}</span>
+                    </li>
+                    <li><label class="ftgrey">证件号码</label>
+                        <span>{{usinfo.card_num}}</span>
+                    </li>
+                    <li><label class="ftgrey">选择地区</label>
+                        <span>{{usinfo.prov_city}}</span>
+                    </li>
+                    <li><label class="ftgrey">详细地址</label>
+                        <span>{{usinfo.address}}</span>
+                    </li>
+                    <li><label class="ftgrey">&#12288;&#12288;备注</label>
+                        <span>{{usinfo.remark}}</span>
+                    </li>
+                </ul>
+            </section>
+            <section class="w100 packet_info mt1rem">
+                <button type="submit" class="button_green">快速投保</button>
+            </section>
+        </div>
+        <!--购买记录-->
+        <div class="tag" style="display:none">
+            <section class="bgwhite w100 store_list bodb_padnone">
+                <ul>
+                    <li ng-repeat="list in order_list">
+                        <span class="fr mt1rem ftgrey ft09r">{{list.create_time}}</span>
+                        <img src="" ng-src="{{list.goods_id}}" class="fl "/>
+                        <h4>{{list.goods_name}}</h4>
+                        <p class="ftgrey">订单号：{{list.order_no}}</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <div class="detail_menus">
+        <div class="btn_delete"></div>
+        <div class="btn_edit"></div>
+        <div class="btn_main"></div>
+    </div>
+</div>

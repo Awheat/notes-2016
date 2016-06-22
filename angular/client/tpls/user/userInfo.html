@@ -1,0 +1,100 @@
+<nav class="zj-navbar bg-white padl-r15">
+    <ul>
+        <li><a href="#/index3/certifList">认证审核</a></li>
+        <li><a href="#/index3/userInfo"  class="current">用户信息</a></li>
+        <li><a href="#/index3/infoExport" >信息导出</a></li>
+    </ul>
+</nav>
+<form class="form-inline form" id="depForm" name="depForm" action="#" method="post">
+    <div class="bg-white clear-both mar15">
+        <div class="modal-body">
+            <div class="for-search">
+                <span>
+                   <label for="name">姓名</label>
+                   <input type="text" class="form-control" name="name" id="name" placeholder="" value="">
+                 </span>
+                 <span>
+                  <label for="mobile">手机号</label>
+                  <input type="text" class="form-control" name="mobile" id="mobile" placeholder="" value="">
+                 </span>
+                 <span>
+                  <label for="organ">状态</label>
+                  <select id="organ" name="organ" class="form-control">
+                      <option value="">请选择</option>
+                      <option value="1">测试1</option>
+                      <option value="2">普通管理员</option>
+                      <option value="3">管理员管理权限</option>
+                      <option value="4">其实aa11</option>
+                  </select>
+                 </span>
+                  <span>
+                  <label for="start_date">时间</label>
+                  <input type="text" class="form-control laydate-icon clear-border" id="start" name="start_date"/>
+                  <small class="padl-r10">至</small> <input type="text" class="form-control laydate-icon clear-border"
+                                                           id="end" name="end_date"/>
+                  </span>
+
+                <p class="zj-pbtnr">
+                    <button class="icon-search red-btn" type="submit" title="查询"></button>
+                </p>
+            </div>
+            <table class="table table-striped table-bordered" width="100%" border="0" cellspacing="0"
+                   cellpadding="0">
+                <tr>
+                    <th>姓名</th>
+                    <th>手机号</th>
+                    <th>身份证号</th>
+                    <th>所属机构</th>
+                    <th>标签</th>
+                    <th>申请时间</th>
+                    <th>通过时间</th>
+                    <th>审核状态</th>
+                    <th>证件照正面</th>
+                    <th>证件照反面</th>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>15236985463</td>
+                    <td>010236589652365236</td>
+                    <td>微众营创</td>
+                    <td>标签</td>
+                    <td>2016-04-05</td>
+                    <td>2016-04-06</td>
+                    <td>未通过</td>
+                    <td><img src="dist/images/card_zheng.png" class="min-img"
+                             onMouseOver="toolTip('<img src=dist/images/card_zheng.png>')"
+                             onMouseOut="toolTip()"></td>
+                    <td><img src="dist/images/card_fan.png" class="min-img"
+                             onMouseOver="toolTip('<img src=dist/images/card_fan.png>')"
+                             onMouseOut="toolTip()"></td>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>15236985463</td>
+                    <td>010236589652365236</td>
+                    <td>微众营创</td>
+                    <td>标签</td>
+                    <td>2016-04-05</td>
+                    <td>2016-04-06</td>
+                    <td>未通过</td>
+
+                    <td><img src="dist/images/card_zheng.png" class="min-img"
+                             onMouseOver="toolTip('<img src=dist/images/card_zheng.png>')"
+                             onMouseOut="toolTip()"></td>
+                    <td><img src="dist/images/card_fan.png" class="min-img"
+                             onMouseOver="toolTip('<img src=dist/images/card_fan.png>')"
+                             onMouseOut="toolTip()"></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</form>
+<nav class="page">
+    <button type="button" class="but-checkall"><i class="zj-icon icon-table"></i> 导出表格</button>
+    <ul class="page-list" id="pageBar">
+        <li class="current"><a class="current">1</a></li>
+        <li><a class="num" href="#">2</a></li>
+        <li><a class="next" href="#"><span aria-hidden="true">»</span></a></li>
+    </ul>
+</nav>

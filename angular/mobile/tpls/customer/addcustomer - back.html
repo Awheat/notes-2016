@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html ng-app="layoutApp" ng-controller="validateCtrl" lang="en" >
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/style.min.css?0">
+    <link rel="stylesheet" type="text/css" href="../../libs/mobiscroll/css/mobiscroll.scroller.css">
+    <link rel="stylesheet" type="text/css" href="../../libs/mobiscroll/css/mobiscroll.scroller.android-ics.css">
+    <!-- Angularjs Start  -->
+    <script type="text/javascript" src="../../libs/angular/angular.min.js"></script>
+    <!-- Angularjs End  -->
+    <style type="text/css">
+        .error{position: fixed; width: 200px; height: 100px; background-color: #fff; top:200px; left: 50%; margin-left: -100px;}
+        .error p{text-align: center;}
+    </style>
+</head>
+<body>
+<div id="layout">
+<div class="wz_body">
+    <form  class="newcusForm" name="newcusForm" ng-submit="signupForm()" novalidate>
+        <section class="bgwhite w100 mt1rem person_list">
+            <ul class="ncustom_ul">
+                <li><label>客户姓名<em class="red_star">*</em></label>
+                    <input type="text" name="name" ng-model="formData.name" value="" placeholder="请输入姓名" required ng-minlength="2" ng-maxlength="5" ng-pattern="/\u4e00-\u9fa5/" />
+                    <div class="error" ng-show="newcusForm.name.$invalid && newcusForm.submitted">
+                        <small class="error" ng-show="newcusForm.name.$error.required">
+                            请输入客户姓名。 
+                        </small>
+                        <small class="error" ng-show="newcusForm.name.$error.minlength || newcusForm.name.$error.maxlength || newcusForm.name.$error.pattern">
+                            请输入2-5个中文字符。
+                        </small>
+                    </div>
+                </li>
+                <li><label>联系方式<em class="red_star">*</em></label>
+                    <input type="text" name="tel" ng-model="formData.tel" value="" placeholder="请输入手机号"/>
+                    <div class="error" ng-show="newcusForm.name.$invalid && newcusForm.submitted">
+                        <small class="error" ng-show="newcusForm.name.$error.required">
+                            请输入联系方式。 
+                        </small>
+                        <small class="error" ng-show="newcusForm.name.$error.minlength || newcusForm.name.$error.maxlength || newcusForm.name.$error.pattern">
+                            请输入2-5位客户姓名。
+                        </small>
+                    </div>
+                </li>
+                <li><i class="icon icon_select fr"></i><label>证件类型<em class="red_star">&nbsp;</em></label>
+                    <select ng-model="formData.credit_type" >
+                        <option>身份证</option>
+                        <option>护照</option>
+                    </select>
+                </li>
+                <!-- <li><label>证件号码<em class="red_star">&nbsp;</em></label>
+                    <input type="text" name="credit_code" ng-model="formData.credit_code" value=""
+                           placeholder="请输入证件号码"/>
+                </li>
+                <li><i class="icon icon_select fr"></i><label>&#12288;&#12288;性别<em class="red_star">&nbsp;</em></label> 
+                    <select ng-model="formData.sex" ng-options="s.value as s.text for s in gender"></select>
+                </li>
+                <li><label>出生日期<em class="red_star">&nbsp;</em></label>
+                    <input type="text" name="birthday" ng-model="formData.birthday" value="" placeholder="请输入出生日期"/>
+                </li>
+                <li><label>选择地区<em class="red_star">&nbsp;</em></label>
+                    <input id="area" placeholder="请选择所在地区" value=""  readonly="" class="">
+                </li>
+                <li><label>详细地址<em class="red_star">&nbsp;</em></label>
+                    <input type="text" name="address" ng-model="formData.address" value="" placeholder="街道门牌信息"/>
+                </li>
+                <li><label>&#12288;&#12288;备注<em class="red_star">&nbsp;</em></label>
+                    <input type="text" name="remark" ng-model="formData.remark" value="" placeholder="备注信息"/>
+                </li>
+            </ul> -->
+        </section>
+        <section class="w100 mt1rem packet_info">
+            <button type="submit" class="button_green" >确认</button>
+        </section>
+    </form>
+</div>
+
+<script type="text/javascript">
+    var app = angular.module('layoutApp', []);
+    app.controller('validateCtrl', function($scope) {
+        $scope.submitted = false;
+        $scope.signupForm = function(){
+            if ($scope.newcusForm.$valid) {
+                // Submit as normal
+                // var error = document.getElementClassName("error");
+                // console.log(error);
+                alert("验证通过");
+            } else {
+                alert('验证不通过');
+                $scope.newcusForm.submitted = true;
+            }
+        }
+    });
+</script>
+</body>
+</html>
