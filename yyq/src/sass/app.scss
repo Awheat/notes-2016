@@ -1,0 +1,222 @@
+/*
++--------------------------------------------------------------------
++		@Project: yyq
++		@Date: 2016/5/9
++		@Author: wuwangcheng
++		@Email: 395212731@qq.com
++		@Address zhongqinghuayun
++--------------------------------------------------------------------
+*/
+/*
++--------------------------------------------------------------------
++       #common
++--------------------------------------------------------------------
+*/
+$baseBigTitleFontSize:20;
+$baseBtnOrInputFontSize:18;
+$baseContentFontSize:16;
+$baseColorOne:#14b888;
+$baseColorTwo:#ffa921;
+$baseBorderColor:#cecece;
+$baseFontSize:50;
+
+/* px转换成rem */
+
+@function g($px){
+  @return $px / $baseFontSize * 1rem;
+}
+/* 根据不同的吃参数生成按钮或者input输入框 */
+
+@mixin formBtnOrInputBox($ftColor:#ffffff,$bgColor:#ffffff,$border:'none'){
+  display: flex;
+  width: 100%;
+  height: g(35);
+  line-height: g(35);
+  padding-left: 10px;
+  justify-content: center;
+  align-items: center;
+  color: $ftColor;
+  font-size: g($baseBtnOrInputFontSize);
+  border: $border;
+  border-radius: 7px;
+  box-sizing: border-box;
+  background: $bgColor;
+}
+
+
+#layout{
+  width: 100%;
+  height: 100%;
+  padding-top: g(50);
+}
+/*
++--------------------------------------------------------------------
++       #header
++--------------------------------------------------------------------
+*/
+#header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: g(50);
+  line-height: g(50);
+  text-align: center;
+  color: #ffffff;
+  font-size: g($baseBigTitleFontSize);
+  background: #14b888;
+
+  .back-btn{
+    position: absolute;
+    display: block;
+    width: g(60);
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    .icon-arrow{
+      display: inline-block;
+      width: g(12);
+      height: g(12);
+      border: 2px solid #ffffff;
+      border-top: none;
+      border-right: none;
+      transform: rotate(45deg);
+    }
+  }
+}
+/*
++--------------------------------------------------------------------
++       #login
++--------------------------------------------------------------------
+*/
+.yyq-login-wraper{
+  height: 100%;
+  background: #ffffff;
+
+  .yyq-login-form{
+    padding: g(30);
+    background: #f3f3f3;
+  }
+  .yyq-login-form p{
+    @include formBtnOrInputBox(#333333,#ffffff,1px solid $baseBorderColor);
+    padding-left: 0;
+  }
+  .yyq-login-form p label{
+    width: g(30);
+    color: #cecece;
+    font-size: g($baseBtnOrInputFontSize);
+    text-align: center;
+  }
+  .yyq-login-form p input{
+    flex: 1;
+  }
+  .yyq-login-form p:first-of-type{
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+  .yyq-login-form p:last-of-type{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+  .yyq-login-form p:last-of-type label{
+    text-indent: 5px;
+  }
+  .yyq-login-btns{
+    display: flex;
+    padding: 0 g(30) g(30) g(30);
+    background: #f3f3f3;
+  }
+  .yyq-login-btns a:first-of-type{
+    margin-right: 10px;
+    @include formBtnOrInputBox($bgColor:$baseColorTwo);
+  }
+  .yyq-login-btns a:last-of-type{
+    margin-left: 10px;
+    @include formBtnOrInputBox($bgColor:$baseColorOne);
+  }
+  .yyq-login-tips{
+    width: 100%;
+    padding-bottom: 50px;
+    text-align: center;
+    background:#f3f3f3 url("../images/login.png") no-repeat;
+    background-size: cover;
+  }
+  .yyq-login-tips p{
+    padding: g(40) 0 g(30) 0;
+    color: #808080;
+  }
+  .yyq-login-tips a{
+    color: $baseColorTwo;
+  }
+}
+/*
++--------------------------------------------------------------------
++       #regist
++--------------------------------------------------------------------
+*/
+.yyq-regist-wraper{
+  padding: g(20);
+
+  p{
+    @include formBtnOrInputBox($ftColor:#333333,$border:1px solid $baseBorderColor);
+    margin-bottom: 20px;
+  }
+  p input{
+    flex: 1;
+  }
+  .regist-ckcode{
+    display: flex;
+    height: g(35);
+    line-height: g(35);
+    justify-content: center;
+    align-items: center;
+  }
+  .regist-ckcode input{
+    display: block;
+    flex: 1.5;
+    height: 100%;
+    padding-left: 10px;
+    margin-right: 20px;
+    border:1px solid #cecece;
+    border-radius: 7px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .regist-ckcode span{
+    display: block;
+    height: 100%;
+    flex: 1;
+    color: #fff;
+    font-size: g($baseContentFontSize);
+    text-align: center;
+    border-radius: 7px;
+    background: $baseColorTwo;
+  }
+  .regist-agmt{
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: #b2b2b2;
+    font-size: g($baseContentFontSize);
+  }
+  .regist-agmt span{
+    display: inline-block;
+    width: g(15);
+    height: g(15);
+    margin: 0 10px -2px 0;
+    background-color: $baseColorOne;
+  }
+  .regist-agmt span.cur{
+    background:$baseColorOne url("../images/icon_chk.png") no-repeat center;
+    background-size: 10px 8px;
+  }
+  .regist-btn{
+    @include formBtnOrInputBox($bgColor:$baseColorOne);
+  }
+}
