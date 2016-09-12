@@ -1,0 +1,357 @@
+ body{background-color: #ecedf0;}
+ a:hover{text-decoration: none;}
+ label.error{
+  color: #ff0000;
+  font-size: 12px;
+ }
+  /* login(登录)
+ ============================================================================ */
+ .login-wraper .form-signin{
+  width: 400px;
+  height: 350px;
+  padding: 20px;
+  margin: 10% auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  background: #ecf0f1;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.04);
+}
+.login-wraper .form-signin > input{
+  margin-top: 20px;
+}
+.login-wraper .checkbox label span{
+  color: #666;
+  font-size: 10px;
+}
+ /*
+  外层容器
+*/
+.wraper{padding-top: 60px;}
+@media (min-width: 768px) {
+  .wraper{padding:60px 10px 10px 210px;}
+  .main-content > .search.navbar-form{padding-left: 0;}
+}
+/*
+  topbar
+*/
+.navbar-fixed-top{
+  background-color: #fff;
+}
+.navbar-fixed-top a.navbar-brand{
+  width: 200px;
+  color: #333;
+  border-right: 1px solid #eaeaea;
+  background: url("../images/logo.png") no-repeat center;
+  background-size: 70px;
+}
+.search .form-group{
+  position: relative;
+}
+.search .form-group .btn-default.r-icon{
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  color: #999;
+  border: none;
+}
+.search .form-group .btn-default:hover{
+  color: #333;
+  background: none;
+}
+.glyphicon-user{
+  margin-right: 5px;
+}
+/* 
+  sidebar-menu
+*/
+.sidebar-menu{
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background: #414a5d !important;
+}
+.sidebar-menu > .panel-group .panel.panel-default{
+  border-radius: 0;
+  margin-bottom: -6px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #ecedf0;
+}
+.sidebar-menu > .panel-group .panel-heading{
+  background-color: transparent;
+}
+.sidebar-menu > .panel-group .panel-title{
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  user-select:none;
+  -webkit-user-select:none;
+}
+.sidebar-menu > .panel-group .panel-title i{
+  margin-right: 10px;
+}
+.sidebar-menu > .panel-group div.panel-collapse{
+  background-color: #000000;
+}
+.sidebar-menu > .panel-group div.panel-collapse ul{
+  padding: 10px 0;
+  margin: 0;
+}
+.sidebar-menu > .panel-group div.panel-collapse ul li.cur{
+  border-left: 5px solid #ffffff;
+  box-sizing: border-box;
+}
+.sidebar-menu > .panel-group div.panel-collapse ul li.cur a{
+  color: #ffffff;
+}
+.sidebar-menu > .panel-group div.panel-collapse ul li a{
+  display: block;
+  color: #828483;
+  font-family: "Microsoft YaHei";
+  padding: 5px 15px 5px 50px;
+}
+.sidebar-menu > .panel-group .caret{
+  margin-left: 40%;
+}
+/*
+  main-content
+*/
+.main-content{
+  position: relative;
+  padding-bottom: 100px;
+  min-height: 1000px;
+  box-shadow:0 0 10px rgba(0, 0,0, 0.3);
+  background-color: #fff;
+}
+.main-content img{
+  width: 100%;
+  max-height: 170px;
+}
+/*
+  footer
+*/
+.copyright{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #a1a1a1;
+}
+/* 
+  添加类容的按钮
+ */
+.btn-add{
+  margin-bottom: 20px;
+}
+.btn-add span{
+  display: block;
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  background: #414a5d;
+}
+/*
+  添加Banner
+*/
+.draggable .panel{
+  cursor: move;
+  border-radius: 0;
+  box-shadow:0 0 10px rgba(0, 0,0, 0.3);
+}
+.panel button{
+  padding: 5px 20px;
+  margin-right: 20px;
+  border-radius: 0;
+  font-family: "Microsoft YaHei";
+}
+.panel button.edit{
+  color: #ffffff;
+  background-color: #7dcdc6;
+}
+.panel button.delete{
+  color: #ffffff;
+  background-color: #d9524e;
+}
+/* 
+  模态框
+ */
+.modal-dialog div.form-group.form-upload{
+  position: relative;
+  height: 170px;
+}
+.modal-dialog div.form-group.form-upload .btn-upload,
+.modal-dialog div.form-group.form-upload input{
+  position: absolute;
+  top: 28px;
+  left: 0;
+  display: block;
+  width: 245px;
+  height: 140px;
+}
+.modal-dialog div.form-group.form-upload input{
+  z-index: 10;
+  opacity: 0;
+  cursor: pointer;
+  filter: alpha(opacity=0);
+}
+.modal-dialog div.form-group.form-datetime label{
+  display: block;
+}
+.modal-dialog div.form-group.form-datetime input{
+  display: inline-block;
+  width: 170px;
+}
+.modal-dialog div.form-group.form-submit button{
+  padding: 5px 40px;
+}
+/* 
+  资讯
+
+ */
+#myTabContent div.tab-pane{
+  padding: 20px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+#myTabContent div.tab-pane img{
+  
+}
+/* 
+  新增机构企业推荐
+ */
+.organization{
+  cursor: move;
+  margin-bottom: 50px;
+  border: 1px solid #eeeeee;
+}
+.organization h3.title{
+  padding-bottom: 20px;
+  text-indent: 30px;
+  border-bottom: 1px solid #eaeaea;
+}
+.organization .panel{
+  margin:0 20px 20px 20px;
+  border-radius: 0;
+}
+.organization .panel h3{
+  margin-top: 0;
+}
+.organization .panel .block-imgs img{
+  width: 240px;
+  height: 110px;
+}
+.organization .panel .block-info{
+  width: 70%;
+  margin-left: 20px;
+}
+.organization .panel .block-info p{
+  line-height: 20px;
+  max-height: 40px;
+  overflow: hidden;
+}
+/* 
+
+  友情链接
+
+ */
+ .friendlink-items{
+  cursor: move;
+  padding: 20px 10px;
+  border: 1px solid #eaeaea;
+  box-shadow:0 0 10px rgba(0, 0,0, 0.3);
+  background: #ffffff;
+ }
+ /* 
+    发布文章
+  */
+.create_article{}
+.create_article input{
+  max-width: 900px;
+}
+.create_article div.form-type{
+  height: 35px;
+}
+.create_article div.form-type label.error{
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.create_article div.form-type span{
+  display: block;
+  padding: 0 30px;
+  height: 33px;
+  line-height: 33px;
+  float: left;
+  color: #777777;
+  cursor: pointer;
+  margin-right: 12px;
+  border: 1px solid #828483;
+  background: #ffffff;
+}
+.create_article div.form-type span.active{
+  color: #ffffff;
+  background:#000000;
+}
+.create_article div.form-abstract:after{
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+  overflow: hidden;
+}
+.create_article div.form-abstract .abstract textarea{
+  width: 635px;
+  height: 140px;
+  resize: none;
+}
+.create_article div.form-abstract .upload{
+  position: relative;
+  width: 245px;
+  height: 140px;
+  margin-left: 20px;
+  background: url(../images/upload.png) no-repeat;
+}
+.create_article div.form-abstract .upload input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  filter: alpha(opacity=0);
+}
+#article_content{
+  max-width: 900px;
+  height: 350px;
+}
+/* 
+  文章列表
+ */
+.table td i{
+  font-style: normal;
+  color: #ff0000;
+}
+ .table td a{
+  margin-right: 10px;
+ }
+ /* 
+
+  文章审核
+
+ */
+.total-num{
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.total-num i{
+  color: #7dcdc6;
+}

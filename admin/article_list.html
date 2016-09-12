@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中青公益后台管理系统-文章列表</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+</head>
+<body>
+<!-- 外层容器[ -->
+<div class="wraper">
+    <!-- 导航栏[ -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- title和logo -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mb-menus" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+          </button>
+          <a href="index.html" class="navbar-brand text-center"></a>
+        </div>
+        <!-- 右侧的导航 -->
+        <div class="collapse navbar-collapse" id="mb-menus">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">帮助</a></li>
+            <li><a href="#">退出</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="glyphicon-user"></span>张三 <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- 搜索 -->
+          <form action="#" class="search navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="search">
+              <button type="submit" class="btn btn-default glyphicon-search r-icon"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div><!-- ]导航栏 -->
+
+    <!-- 侧边栏[ -->
+    <div class="sidebar-menu hidden-xs">
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <!-- 一个菜单 -->
+        <div class="panel panel-default">
+          <div class="panel-heading active" role="tab" id="headingOne">
+            <div class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">  <i class="glyphicon-home"></i>首页管理<span class="caret"></span>
+            </div>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+            <ul>
+              <li><a href="banner.html">Banner</a></li>
+              <li><a href="information.html">资讯推荐</a></li>
+              <li><a href="organization.html">机构企业推荐</a></li>
+              <li><a href="friendlink.html">友情链接</a></li>
+            </ul>
+          </div>
+        </div><!-- ]一个菜单 -->
+        <!-- 一个菜单[ -->
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <div class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true">  <i class="glyphicon-info-sign"></i>资讯管理<span class="caret"></span>
+            </div>
+          </div>
+            <div id="collapseTwo" class="panel-collapse collapse in" aria-expanded="true" role="tabpanel" aria-labelledby="headingOne">
+                <ul>
+                  <li><a href="hotspot.html">热点管理</a></li>
+                  <li><a href="examine.html">文章审核</a></li>
+                  <li><a href="create_article.html">文章发布</a></li>
+                  <li class="cur"><a href="article_list.html">文章列表</a></li>
+                </ul>
+            </div>
+        </div><!-- ]一个菜单 -->        
+      </div>
+    </div><!-- ]侧边栏 -->
+    
+     <!-- 中间内容[ -->
+    <div class="container-fluid main-content">
+        <h3 class="page-header">文章列表</h3>
+       
+         <!-- 表单上搜索区域[ -->
+        <form action="#" class="search navbar-form">
+          <div class="form-group">
+            <input type="text" class="form-control" name="id" placeholder="ID">
+          </div>
+           <div class="form-group">
+            <input type="text" class="form-control" name="title" placeholder="标题">
+          </div>
+          <div class="form-group">
+            <select class="form-control">
+              <option selected="selected">选择状态</option>
+              <option>已发布</option>
+              <option>草稿</option>
+              <option>审核中</option>
+              <option>未通过</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select class="form-control">
+              <option selected="selected">选择类型</option>
+              <option>中青公台</option>
+              <option>政策法规</option>
+              <option>地方新闻</option>
+              <option>爱心企业</option>
+              <option>公益人物</option>
+              <option>志愿文化</option>
+              <option>校园公益</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <select class="form-control">
+              <option selected="selected">选择来源</option>
+              <option>用户投稿</option>
+              <option>后台发布</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-default">查询</button>
+          </div>
+        </form><!-- ]表单上搜索区域 -->
+        
+        <!-- 响应式的显示数据的表格[ -->
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover table-striped">
+            <thead>
+              <th>ID</th>
+              <th>标题</th>
+              <th>状态</th>
+              <th>类型</th>
+              <th>来源</th>
+              <th>热度</th>
+              <th>操作</th>
+            </thead>
+            <tbody id="tbody">
+              <tr>
+                <td>100001</td>
+                <td>中青公益扬帆起航</td>
+                <td>已发布</td>
+                <td>政策法规</td>
+                <td>后台发布</td>
+                <td>点击<i>(10)</i>点赞<i>(100)</i></td>
+                <td>
+                  <a href="#">编辑</a>
+                  <a href="#">删除</a>
+                  <a href="#">上移</a>
+                  <a href="#">下移</a>
+                  <a href="#">置顶</a>
+                  <a href="#">推荐到首页</a>
+                </td>
+              </tr>
+              <tr>
+                <td>100001</td>
+                <td>中青公益扬帆起航</td>
+                <td>已发布</td>
+                <td>政策法规</td>
+                <td>后台发布</td>
+                <td>点击<i>(10)</i>点赞<i>(100)</i></td>
+                <td>
+                  <a href="#">编辑</a>
+                  <a href="#">删除</a>
+                  <a href="#">上移</a>
+                  <a href="#">下移</a>
+                  <a href="#">置顶</a>
+                  <a href="#">推荐到首页</a>
+                </td>
+              </tr>
+              <tr>
+                <td>100001</td>
+                <td>中青公益扬帆起航</td>
+                <td>已发布</td>
+                <td>政策法规</td>
+                <td>后台发布</td>
+                <td>点击<i>(10)</i>点赞<i>(100)</i></td>
+                <td>
+                  <a href="#">编辑</a>
+                  <a href="#">删除</a>
+                  <a href="#">上移</a>
+                  <a href="#">下移</a>
+                  <a href="#">置顶</a>
+                  <a href="#">推荐到首页</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- 响应式的显示数据的表格[ -->
+        <!-- 分页[ -->
+        <nav class="text-center">
+          <ul class="pagination">
+            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo</span></a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo</span></a></li>
+          </ul>
+        </nav>
+        
+
+        <!-- footer版权声明[ -->
+        <footer class="copyright text-center"><p>© Copyright 2016</p></footer><!-- ]footer版权声明 -->
+    </div><!-- ]中间内容 -->
+
+
+</div><!-- ]外层容器 -->
+</body>
+<script src="js/libs/jquery.min.js"></script>
+<script src='js/libs/jquery-ui.min.js'></script>
+<script src="js/libs/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        /* 拖拽 */
+        $( "#tbody" ).sortable({revert: true}); 
+    });
+</script>
+</html>

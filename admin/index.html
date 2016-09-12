@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中青公益后台管理系统-首页</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+</head>
+<body>
+<!-- 外层容器[ -->
+<div class="wraper">
+    <!-- 导航栏[ -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- title和logo -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mb-menus" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+          </button>
+          <a href="index.html" class="navbar-brand text-center"></a>
+        </div>
+        <!-- 右侧的导航 -->
+        <div class="collapse navbar-collapse" id="mb-menus">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">帮助</a></li>
+            <li><a href="#">退出</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="glyphicon-user"></span>张三 <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- 搜索 -->
+          <form action="#" class="search navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="search">
+              <button type="submit" class="btn btn-default glyphicon-search r-icon"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div><!-- ]导航栏 -->
+
+    <!-- 侧边栏[ -->
+    <div class="sidebar-menu hidden-xs">
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <!-- 一个菜单 -->
+        <div class="panel panel-default">
+          <div class="panel-heading active" role="tab" id="headingOne">
+            <div class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">  <i class="glyphicon-home"></i>首页管理<span class="caret"></span>
+            </div>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse"  role="tabpanel" aria-labelledby="headingOne">
+            <ul>
+              <li><a href="banner.html">Banner</a></li>
+              <li><a href="information.html">资讯推荐</a></li>
+              <li><a href="organization.html">机构企业推荐</a></li>
+              <li><a href="friendlink.html">友情链接</a></li>
+            </ul>
+          </div>
+        </div><!-- ]一个菜单 -->
+        <!-- 一个菜单[ -->
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="headingTwo">
+            <div class="panel-title" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true">  <i class="glyphicon-info-sign"></i>资讯管理<span class="caret"></span>
+            </div>
+          </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <ul>
+                  <li><a href="hotspot.html">热点管理</a></li>
+                  <li><a href="examine.html">文章审核</a></li>
+                  <li><a href="create_article.html">文章发布</a></li>
+                  <li class="cur"><a href="article_list.html">文章列表</a></li>
+                </ul>
+            </div>
+        </div><!-- ]一个菜单 -->        
+      </div>
+    </div><!-- ]侧边栏 -->
+    
+     <!-- 中间内容[ -->
+    <div class="container-fluid main-content">
+        <h1>欢迎进入中青公益后台管理系统~</h1>
+        <!-- footer版权声明[ -->
+        <footer class="copyright text-center"><p>© Copyright 2016</p></footer><!-- ]footer版权声明 -->
+    </div><!-- ]中间内容 -->
+
+
+</div><!-- ]外层容器 -->
+</body>
+<script src="js/libs/jquery.min.js"></script>
+<script src="js/libs/bootstrap.min.js"></script>
+</html>
